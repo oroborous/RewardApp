@@ -1,0 +1,16 @@
+----------------------------------------------------------------
+Fri Oct 16 15:05:17 CDT 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0175-3304-3d3e-000008ef2f48 
+on database directory memory:C:\Miscellanies\SoftwareDevelopment\Random\RewardApp\c71392be-81ec-43fb-88ab-0502bd91253c with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@77556fd 
+Loaded from file:/C:/Users/ebobalo/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=11.0.8+10-LTS
+user.dir=C:\Miscellanies\SoftwareDevelopment\Random\RewardApp
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Oct 16 15:05:41 CDT 2020:
+Shutting down instance a816c00e-0175-3304-3d3e-000008ef2f48 on database directory memory:C:\Miscellanies\SoftwareDevelopment\Random\RewardApp\c71392be-81ec-43fb-88ab-0502bd91253c with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@77556fd 
