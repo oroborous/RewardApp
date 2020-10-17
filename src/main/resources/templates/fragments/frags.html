@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${pageTitle}"></title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Megrim&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" th:href="@{/css/style.css}">
+    <script th:src="@{/js/script.js}"></script>
+</head>
+<body>
+
+<!--    <div class="fullscreen-bg" th:fragment="background">-->
+<!--        <video loop muted autoplay class="fullscreen-bg__video">-->
+<!--            <source th:src="@{/video/nameOfTheVideo.mov}" type="video/mp4">-->
+<!--        </video>-->
+<!--    </div>-->
+
+    <header th:fragment="header">
+        <h1><a th:href="@{/}">Welcome to the Matthews Reward record application</a></h1>
+    </header>
+
+    <footer th:fragment="disclaimer">
+        For Bobalo family use only.
+    </footer>
+
+</body>
+</html>
