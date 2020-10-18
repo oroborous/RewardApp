@@ -1,7 +1,7 @@
 ----------------------------------------------------------------
-Sat Oct 17 19:30:28 CDT 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0175-391d-61a3-000006d0b280 
-on database directory memory:/Users/eugenebobalo/Software_Development_Stuff/Projects/RewardApp/ec8c3aeb-aca7-4cf4-b067-3d13ef091b37 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@3d4eac69 
+Sun Oct 18 12:12:30 CDT 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0175-3cb2-c506-0000060f7ec8 
+on database directory memory:/Users/eugenebobalo/Software_Development_Stuff/Projects/RewardApp/6ce126c7-7cef-40c0-a369-0950f750a965 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@3d4eac69 
 Loaded from file:/Users/eugenebobalo/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
 java.runtime.version=12.0.2+10
@@ -12,5 +12,5 @@ os.version=10.13.6
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Sat Oct 17 19:31:02 CDT 2020:
-Shutting down instance a816c00e-0175-391d-61a3-000006d0b280 on database directory memory:/Users/eugenebobalo/Software_Development_Stuff/Projects/RewardApp/ec8c3aeb-aca7-4cf4-b067-3d13ef091b37 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@3d4eac69 
+Sun Oct 18 12:13:45 CDT 2020:
+Shutting down instance a816c00e-0175-3cb2-c506-0000060f7ec8 on database directory memory:/Users/eugenebobalo/Software_Development_Stuff/Projects/RewardApp/6ce126c7-7cef-40c0-a369-0950f750a965 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@3d4eac69 
