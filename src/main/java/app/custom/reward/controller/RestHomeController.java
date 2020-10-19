@@ -3,10 +3,7 @@ package app.custom.reward.controller;
 import app.custom.reward.dto.UserRepository;
 import app.custom.reward.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,7 +14,7 @@ public class RestHomeController {
     private UserRepository repository;
 
     @PostMapping("/saveUsers")
-    public String saveUser(List<User> users) {
+    public String saveUser(@RequestBody List<User> users) {
         repository.saveAll(users);
         return users.size() + "record saved..";
     }
