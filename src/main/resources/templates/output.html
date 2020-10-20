@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head th:replace="fragments/frags :: head"></head>
+
+<body>
+    <div>
+        <div th:insert="fragments/frags :: header"></div>
+
+        <p th:text="'Name: ' + ${user.name}" />
+        <p th:text="'Occupation: ' + ${user.occupation}" />
+
+<!--        <a href="/testinput">Submit another test</a>-->
+
+    </div>
+    <div th:replace="fragments/frags :: disclaimer"></div>
+
+</body>
+</html>
