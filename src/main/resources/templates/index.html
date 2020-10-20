@@ -5,16 +5,26 @@
 
 <body>
     <div>
-        <div>
-<!--            <h1>Hi.</h1>-->
 
-            <div th:insert="fragments/frags :: header"></div>
+        <div th:insert="fragments/frags :: header"></div>
             <div>
-                <h1>Hi</h1>
+                <div>
+                    <label for="checkbox1">Custom checkbox 1</label>
+                    <input type="checkbox" id="checkbox1">
+                </div>
+                <div>
+                    <label for="checkbox2">Custom checkbox 2</label>
+                    <input type="checkbox" id="checkbox2">
+                </div>
+                <div>
+                    <label for="checkbox3">Custom checkbox 3</label>
+                    <input type="checkbox" id="checkbox3">
+                </div>
             </div>
+
+
 <!--            <div th:replace="fragments/frags :: background"></div>-->
 
-        </div>
 
         <div th:replace="fragments/frags :: disclaimer"></div>
     </div>
