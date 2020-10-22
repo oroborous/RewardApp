@@ -12,19 +12,41 @@
                     <h3>Lets see how you did today <a th:text="${timeNow}">time</a></h3>
                 </div>
                 <div>
-                    <label for="checkbox1">Custom checkbox 1</label>
+                    <label for="checkbox1">Checkbox 1</label>
                     <input type="checkbox" id="checkbox1">
                 </div>
                 <div>
-                    <label for="checkbox2">Custom checkbox 2</label>
+                    <label for="checkbox2">Checkbox 2</label>
                     <input type="checkbox" id="checkbox2">
                 </div>
                 <div>
-                    <label for="checkbox3">Custom checkbox 3</label>
+                    <label for="checkbox3">Checkbox 3</label>
                     <input type="checkbox" id="checkbox3">
                 </div>
 
             </div>
+
+        <div th:if="${not #lists.isEmpty(problem)}">
+            <h2>Problems</h2>
+            <table class="table table-striped">
+                <tr>
+                    <th>Name of the resource</th>
+                    <th>Error</th>
+                    <th>Description</th>
+                </tr>
+                <tr th:each="pr : ${problem}">
+                    <td th:text="${pr.resourceName}"></td>
+                    <td th:text="${pr.error}"></td>
+                    <td th:text="${pr.description}"></td>
+                </tr>
+            </table>
+        </div>
+<!--        <div>-->
+
+<!--            <p th:text="'Name: ' + ${problem.resourceName}" />-->
+<!--            <p th:text="'Occupation: ' + ${problem.error}" />-->
+<!--            <p th:text="'Occupation: ' + ${problem.description}" />-->
+<!--        </div>-->
 
 
 

@@ -7,10 +7,11 @@
     <div>
         <div th:insert="fragments/frags :: header"></div>
 
-        <p th:text="'Name: ' + ${user.name}" />
-        <p th:text="'Occupation: ' + ${user.occupation}" />
+        <p th:text="'Name: ' + ${problem.resourceName}" />
+        <p th:text="'Occupation: ' + ${problem.error}" />
+        <p th:text="'Occupation: ' + ${problem.description}" />
 
-<!--        <a href="/testinput">Submit another test</a>-->
+        <a href="/testinput">Submit another test</a>
 
     </div>
     <div th:replace="fragments/frags :: disclaimer"></div>
