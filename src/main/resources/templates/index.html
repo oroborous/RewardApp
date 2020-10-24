@@ -26,29 +26,21 @@
 
             </div>
 
-        <div th:if="${not #lists.isEmpty(problem)}">
-            <h2>Problems</h2>
+        <div th:if="${not #lists.isEmpty(logOutput)}">
+            <h2>Log Output</h2>
             <table class="table table-striped">
                 <tr>
                     <th>Name of the resource</th>
                     <th>Error</th>
                     <th>Description</th>
                 </tr>
-                <tr th:each="pr : ${problem}">
+                <tr th:each="pr : ${logOutput}">
                     <td th:text="${pr.resourceName}"></td>
                     <td th:text="${pr.error}"></td>
                     <td th:text="${pr.description}"></td>
                 </tr>
             </table>
         </div>
-<!--        <div>-->
-
-<!--            <p th:text="'Name: ' + ${problem.resourceName}" />-->
-<!--            <p th:text="'Occupation: ' + ${problem.error}" />-->
-<!--            <p th:text="'Occupation: ' + ${problem.description}" />-->
-<!--        </div>-->
-
-
 
 <!--            <div th:replace="fragments/frags :: background"></div>-->
 

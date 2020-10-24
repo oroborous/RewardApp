@@ -1,7 +1,7 @@
 package app.custom.reward.controller;
 
-import app.custom.reward.entity.Problem;
-import app.custom.reward.service.TestBusinessService;
+import app.custom.reward.entity.LogOutput;
+import app.custom.reward.service.LogOutputService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,26 +22,32 @@ public class HomeController {
     String formatDateTime = localDt.format(format);
 
     @Autowired
-    private TestBusinessService testBusinessService;
+    private LogOutputService logOutputService;
 
+    // taking all data from LogOuputService and inserting into Model and passing to the form
     @RequestMapping("/")
     public String homePage(Model model) {
         model.addAttribute("pageTitle", "Reward Application");
         model.addAttribute("timeNow", formatDateTime);
-        model.addAttribute("problem",testBusinessService.getAllProblems());
+        model.addAttribute("logOutput", logOutputService.getAllProblems());
 
         return "index";
     }
 
+    // Taking user input into LogOutput and inserting into the Model
     @GetMapping("/testinput")
     public String sendForm(Model model) {
-        model.addAttribute("problem", new Problem());
+        model.addAttribute("logOutput", new LogOutput());
         return "testinput";
     }
 
-    @PostMapping("/testinput")   // @ModelAttribute Problem problem
-    public String processForm(@ModelAttribute Problem problem, Model model) {
-        model.addAttribute("problem", problem);
+    // Passing the Model to the output form to display
+    @PostMapping("/testinput")
+    // do you think it's a proper way to do this?
+    // using @ModelAttribute LogOutput logOutput, Model model ?
+    // if I already passed the object into the model in sendForm method.
+    public String processForm(@ModelAttribute LogOutput logOutput, Model model) {
+        model.addAttribute("logOutput", logOutput);
         return "output";
     }
 
