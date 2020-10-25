@@ -1,30 +1,39 @@
 package app.custom.reward.service;
 
+import app.custom.reward.dto.LogOutputRepository;
 import app.custom.reward.entity.LogOutput;
+import lombok.extern.java.Log;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 @Service
-public class LogOutputService {
+public class LogOutputService implements LogOutService {
 
-    private List<LogOutput> logOutputList = new ArrayList<>(Arrays.asList(
-            new LogOutput("Cell 1", "A23456", "Problem with a server"),
-            new LogOutput("Cell 2", "B23456", "Binary output is not correct"),
-            new LogOutput("Cell 3", "AB23456", "Execution problem")
-    ));
+    @Autowired
+    private LogOutputRepository logOutputRepository;
+
+    List<LogOutput> problemList = new ArrayList<>();
 
     public List<LogOutput> getAllProblems() {
-        // must be repository interface with extended CrudRepository class
-        //problemList.findAll().forEach(counts::add);
+        logOutputRepository.findAll().forEach(problemList::add);
 
-        return logOutputList;
+        return problemList;
     }
 
+    @Override
+    public void saveLogOutput(LogOutput logOutput) {
+        logOutputRepository.save(logOutput);
+        System.out.println("Saved successfully");
+    }
+
+    @Override
     public LogOutput getProblem(String error) {
-        return logOutputList.stream().filter(p -> p.getError().equals(error)).findFirst().get();
+        return problemList.stream().filter(p -> p.getError().equals(error)).findFirst().get();
     }
 
 }

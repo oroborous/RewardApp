@@ -17,16 +17,17 @@ import java.time.format.DateTimeFormatter;
 @Controller
 public class HomeController {
 
-    LocalDateTime localDt = LocalDateTime.now();
-    DateTimeFormatter format = DateTimeFormatter.ofPattern("MM-dd-yyyy"); // dd-MM-yyyy HH:mm
-    String formatDateTime = localDt.format(format);
-
     @Autowired
     private LogOutputService logOutputService;
 
-    // taking all data from LogOuputService and inserting into Model and passing to the form
+    // taking all data from LogOutputService and inserting into Model and passing to the form
     @RequestMapping("/")
     public String homePage(Model model) {
+
+        LocalDateTime localDt = LocalDateTime.now();
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("MM-dd-yyyy"); // dd-MM-yyyy HH:mm
+        String formatDateTime = localDt.format(format);
+
         model.addAttribute("pageTitle", "Reward Application");
         model.addAttribute("timeNow", formatDateTime);
         model.addAttribute("logOutput", logOutputService.getAllProblems());
@@ -43,11 +44,10 @@ public class HomeController {
 
     // Passing the Model to the output form to display
     @PostMapping("/testinput")
-    // do you think it's a proper way to do this?
-    // using @ModelAttribute LogOutput logOutput, Model model ?
-    // if I already passed the object into the model in sendForm method.
     public String processForm(@ModelAttribute LogOutput logOutput, Model model) {
         model.addAttribute("logOutput", logOutput);
+        // saving an object
+        logOutputService.saveLogOutput(logOutput);
         return "output";
     }
 

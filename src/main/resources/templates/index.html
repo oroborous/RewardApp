@@ -30,11 +30,13 @@
             <h2>Log Output</h2>
             <table class="table table-striped">
                 <tr>
+                    <th>Id</th>
                     <th>Name of the resource</th>
                     <th>Error</th>
                     <th>Description</th>
                 </tr>
                 <tr th:each="pr : ${logOutput}">
+                    <td th:text="${pr.id}"></td>
                     <td th:text="${pr.resourceName}"></td>
                     <td th:text="${pr.error}"></td>
                     <td th:text="${pr.description}"></td>
