@@ -24,12 +24,12 @@ public class HomeController {
     @RequestMapping("/")
     public String homePage(Model model) {
 
-        LocalDateTime localDt = LocalDateTime.now();
-        DateTimeFormatter format = DateTimeFormatter.ofPattern("MM-dd-yyyy"); // dd-MM-yyyy HH:mm
-        String formatDateTime = localDt.format(format);
+//        LocalDateTime localDt = LocalDateTime.now();
+//        DateTimeFormatter format = DateTimeFormatter.ofPattern("MM-dd-yyyy"); // dd-MM-yyyy HH:mm
+//        String formatDateTime = localDt.format(format);
 
         model.addAttribute("pageTitle", "Reward Application");
-        model.addAttribute("timeNow", formatDateTime);
+//        model.addAttribute("timeNow", formatDateTime);
         model.addAttribute("logOutput", logOutputService.getAllProblems());
 
         return "index";

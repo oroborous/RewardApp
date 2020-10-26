@@ -9,7 +9,9 @@
         <div th:insert="fragments/frags :: header"></div>
             <div>
                 <div>
-                    <h3>Lets see how you did today <a th:text="${timeNow}">time</a></h3>
+                    <h3> Lets see how you did today
+                        <span th:text="${#temporals.format(#temporals.createNow(), 'MM-dd-yyyy')}">DATE</span>
+                    </h3>
                 </div>
                 <div>
                     <label for="checkbox1">Checkbox 1</label>
